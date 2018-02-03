@@ -1,3 +1,4 @@
+using MessageBoxExample.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ namespace MessageBoxExample
     public partial class MyMessageBox : Form
     {
 
-        static MyMessageBox newMessageBox;
+        static MyMessageBox newMessageBox; 
         public Timer msgTimer;
         static string Button_id;
         int disposeFormTimer; 
@@ -38,7 +39,15 @@ namespace MessageBoxExample
             newMessageBox.ShowDialog();
             return Button_id;
         } 
-
+        public static string ShowBox(string txtMessage, string txtTitle, Image images)
+        {
+            newMessageBox = new MyMessageBox();
+            newMessageBox.lblTitle.Text = txtTitle;
+            newMessageBox.lblMessage.Text = txtMessage;
+            newMessageBox.pt_icon.Image = images;
+            newMessageBox.ShowDialog();
+            return Button_id;
+        }
         private void MyMessageBox_Load(object sender, EventArgs e)
         {
             disposeFormTimer = 30;
@@ -54,7 +63,6 @@ namespace MessageBoxExample
         {
             Graphics mGraphics = e.Graphics;
             Pen pen1 = new Pen(Color.FromArgb(96, 155, 173), 1);
-            
             Rectangle Area1 = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
             LinearGradientBrush LGB = new LinearGradientBrush(Area1, Color.FromArgb(96, 155, 173), Color.FromArgb(245, 251, 251), LinearGradientMode.Vertical);
             mGraphics.FillRectangle(LGB, Area1);

@@ -1,3 +1,4 @@
+using MessageBoxExample.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,26 @@ namespace MessageBoxExample
             //{
             //    MessageBox.Show("Cancel Button was Clicked");
             //}
+        }
+
+        private void btnSuccess_Click(object sender, EventArgs e)
+        {
+            MyMessageBox.ShowBox("Do you want to exit?", "THÔNG BÁO SUCCESS",Resources.success_icon_32);
+        }
+
+        private void btnError_Click(object sender, EventArgs e)
+        {
+            MyMessageBox.ShowBox("Do you want to exit?", "THÔNG BÁO ERROR", Resources.Error_icon_32);
+        }
+
+        private void btnWarning_Click(object sender, EventArgs e)
+        {
+            MyMessageBox.ShowBox("Do you want to exit?", "THÔNG BÁO WARNING", Resources.Warning_icon_32);
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            MyMessageBox.ShowBox("Do you want to exit?", "THÔNG BÁO INFO", Resources.information_icon_32);
         }
     }
 }
