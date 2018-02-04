@@ -49,5 +49,26 @@ namespace MessageBoxExample
         {
             MyMessageBox.ShowBox("Do you want to exit?", "THÔNG BÁO INFO", Resources.information_icon_32);
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+           // if(e.KeyCode == Keys.)
+            MyMessageBox.ShowBox("Key =" + e.KeyCode);
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            MyMessageBox.ShowBox("Key =" + e.KeyChar);
+        }
+
+        private void btnSuccess_KeyDown(object sender, KeyEventArgs e)
+        {
+            MyMessageBox.ShowBox("Key" + e.KeyCode);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
     }
 }

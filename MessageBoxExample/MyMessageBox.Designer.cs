@@ -96,11 +96,10 @@ namespace MessageBoxExample
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 14);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(600, 52);
+            this.panel2.Size = new System.Drawing.Size(600, 38);
             this.panel2.TabIndex = 7;
             // 
             // pictureBox2
@@ -118,7 +117,6 @@ namespace MessageBoxExample
             // 
             this.panel3.Controls.Add(this.btnOK);
             this.panel3.Controls.Add(this.btnCancel);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 200);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
@@ -129,7 +127,6 @@ namespace MessageBoxExample
             // 
             this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.pt_icon);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 52);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -177,6 +174,7 @@ namespace MessageBoxExample
             this.Text = "MyMessageBox";
             this.Load += new System.EventHandler(this.MyMessageBox_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.MyMessageBox_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MyMessageBox_KeyDown);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

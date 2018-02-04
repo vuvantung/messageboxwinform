@@ -105,5 +105,11 @@ namespace MessageBoxExample
         {
             newMessageBox.Dispose();
         }
+
+        private void MyMessageBox_KeyDown(object sender, KeyEventArgs e)
+        {
+           // if(e.KeyCode == Keys.F1)
+           
+        }
     }
 }

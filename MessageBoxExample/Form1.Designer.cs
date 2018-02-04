@@ -56,6 +56,7 @@ namespace MessageBoxExample
             this.btnSuccess.Text = "success";
             this.btnSuccess.UseVisualStyleBackColor = true;
             this.btnSuccess.Click += new System.EventHandler(this.btnSuccess_Click);
+            this.btnSuccess.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnSuccess_KeyDown);
             // 
             // btnError
             // 
@@ -103,6 +104,9 @@ namespace MessageBoxExample
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
 
         }
